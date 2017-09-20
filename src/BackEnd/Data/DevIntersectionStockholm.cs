@@ -50,6 +50,7 @@ namespace BackEnd
                     "Luca Bolognese",
                     "Mads Torgersen",
                     "Miguel de Icaza",
+                    "Mikkel Mork Heghoj",
                     "Paul Yuknewicz",
                     "Richard Campbell",
                     "Scott Cate",
@@ -132,7 +133,7 @@ namespace BackEnd
                 {
                     StartTime = startTime,
                     Sessions = new[] {
-                        new SessionData { Name = "Keynote: The History of .NET", Speakers = new[] { "Richard Campbell" }, Track = "Keynote",
+                        new SessionData { Name = "Keynote: The History of .NET", Speakers = new[] { "Richard Campbell" }, Track = "Room 1",
                             Abstract = @"Join Richard Campbell as he sets the stage for our learning at DevIntersection by reviewing the history of the .NET Framework, Visual Studio .NET, and the supporting frameworks" }
                     }
                 });
@@ -142,7 +143,7 @@ namespace BackEnd
                 {
                     StartTime = startTime.AddDays(1),
                     Sessions = new[] {
-                        new SessionData { Name = "Keynote: Transforming the World with AI", Speakers = new[] { "Steve Guggenheimer" }, Track = "Expo" }
+                        new SessionData { Name = "Keynote: Transforming the World with AI", Speakers = new[] { "Steve Guggenheimer" }, Track = "Room 1" }
                     }
                 });
 
