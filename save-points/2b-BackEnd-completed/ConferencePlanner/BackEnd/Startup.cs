@@ -29,7 +29,7 @@ namespace BackEnd
 				{
 						 services.AddDbContext<ApplicationDbContext>(options =>
 						 {
-								 if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+								 if (false) //RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 								 {
 										 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
 								 }
@@ -69,7 +69,7 @@ namespace BackEnd
 
             // Comment out the following line to avoid resetting the database each time
             var loader = new DevIntersectionLoader(app.ApplicationServices);
-            loader.LoadData("DevIntersection_Vegas_2017.json", "DevIntersection Vegas 2017");
+            loader.LoadData("DevIntersection_Orlando_2018.json", "DevIntersection Orlando 2018");
         }
     }
 
