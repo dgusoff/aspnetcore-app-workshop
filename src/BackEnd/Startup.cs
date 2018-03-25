@@ -39,11 +39,11 @@ namespace BackEnd
             });
 
             services.AddMvcCore()
-                .AddJsonFormatters()
-                .AddApiExplorer();
+                    .AddJsonFormatters()
+                    .AddApiExplorer();
 
             services.AddSwaggerGen(options =>
-                options.SwaggerDoc("v1", new Info { Title = "Conference Planner API", Version = "v1" })
+                    options.SwaggerDoc("v1", new Info { Title = "Conference Planner API", Version = "v1" })
             );
         }
 
@@ -58,7 +58,7 @@ namespace BackEnd
             app.UseSwagger();
 
             app.UseSwaggerUI(options =>
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Conference Planner API v1")
+                    options.SwaggerEndpoint("/swagger/v1/swagger.json", "Conference Planner API v1")
             );
 
             app.UseMvc();
@@ -70,7 +70,8 @@ namespace BackEnd
             });
 
             // Comment out the following line to avoid resetting the database each time
-            NDCSydneyData.Seed(app.ApplicationServices);
+            var loader = new DevIntersectionLoader(app.ApplicationServices);
+            loader.LoadData("DevIntersection_Vegas_2017.json", "DevIntersection Vegas 2017");
         }
     }
 }
